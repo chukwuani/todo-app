@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="bg"></div>
+
+
+  <div class="container">
+    <section class="header-section">
+      <h1>Todo</h1>
+
+      <span class="theme-switcher">
+        <img class="theme-icon" src="./images/icon-sun.svg" alt="theme-icon">      
+      </span>
+    </section>
+
+    <div class="input">
+      <span class="checkbox">
+         <img class="check" src="./images/icon-check.svg" alt="check">
+      </span>
+
+      <input autocomplete="off" placeholder="Create a new todo..." type="text" name="todo" id="create-todo">
+    </div>
+
+    <!-- List container -->
+    <ul class="todo-list">
+
+      <!-- Navigation container -->
+      <li class="navigation">
+        <p class="nav" id="number-left"></p>
+
+        <span class="nav-list">
+          <p class="active nav" id="all">All</p>
+          <p class="nav" id="active">Active</p>
+          <p class="nav" id="completed">Completed</p>
+        </span>
+
+
+        <p class="nav" id="clear">Clear Completed</p>
+      </li>
+    </ul>
+
+    <!-- Navigation container only visible on mobile -->
+    <span class="nav-list-conatiner">
+      <p class="active nav" id="all-mobile">All</p>
+      <p class="nav" id="active-mobile">Active</p>
+      <p class="nav" id="completed-mobile">Completed</p>
+    </span>
+
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

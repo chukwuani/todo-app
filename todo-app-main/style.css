@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root{
+--Very-Light-Gray: hsl(0, 0%, 98%);
+--Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+--Light-Grayish-Blue: hsl(233, 11%, 84%);
+--Dark-Grayish-Blue: hsl(236, 9%, 61%);
+--Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+--Bright-Blue: hsl(220, 98%, 61%);
+
+--Very-Dark-Blue: hsl(235, 21%, 11%);
+--Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+--Light-Grayish-Blue: hsl(234, 39%, 85%);
+--Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+--Dark-Grayish-Blue: hsl(234, 11%, 52%);
+--Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+--Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+.wrapper{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--Very-Dark-Blue);
+  position: relative;
+}
+
+.light{
+  background-color: var(--Very-Light-Gray);
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.light .bg{
+  background-image: url(./images/bg-desktop-light.jpg);
+}
+
+.container{
+  max-width: 570px;
+  width: 100%;
+  height: auto;
+  margin-top: 85px;
+  margin-bottom: 50px;
+  z-index: 2;
+}
+
+.header-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.header-section h1{
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  color: var(--Very-Light-Gray);
+  font-size: 2.5rem;
+}
+
+.input{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 20px;
+  border-radius: .3rem;
+  overflow: hidden;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  margin-bottom: 20px;
+}
+
+.light .input{
+  background-color: var(--Very-Light-Gray);
+}
+
+.input input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: var(--Dark-Grayish-Blue);
+}
+
+::placeholder{
+  color: var(--Dark-Grayish-Blue);
+}
+
+.input .check{
+  visibility: hidden;
+}
+
+.input .checkbox{
+  cursor: auto;
+}
+
+.checkbox{
+  border-radius: 50%;
+  border: 1px solid var(--Very-Dark-Grayish-Blue);
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.light .checkbox{
+  border: 1px solid var(--Very-Light-Grayish-Blue);
+}
+
+.checkbox img{
+    visibility: hidden;
+}
+
+.todo-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: .3rem;
+  overflow: hidden;
+  visibility: hidden;
+  box-shadow: 0px 20px 20px 0px hsl(235, 21%, 11%);
+}
+
+.light .todo-list{
+  box-shadow: 0px 20px 20px 0px hsla(235, 21%, 11%, 0.096);
+}
+
+.todo-display{
+    font-size: 1rem;
+}
+
+.list-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+  overflow: hidden;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  color: var(--Light-Grayish-Blue);
+  position: relative;
+  cursor: pointer;    
+}
+
+.light .list-item{
+  background-color: var(--Very-Light-Gray);
+  border-bottom: 1px solid var(--Very-Light-Grayish-Blue);
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.left{
+  display: flex;
+  align-items: center;   
+  gap: 25px;
+}
+
+.list-item:hover .delete{
+  visibility: visible;
+}
+
+.delete{
+  display: flex;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.navigation{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 18px;
+  overflow: hidden;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  color: var(--Light-Grayish-Blue);
+  visibility: hidden;
+}
+
+.light .navigation{
+  background-color: var(--Very-Light-Gray);
+}
+
+.nav{
+  font-size: .9rem;
+  font-weight: 550;
+  color:  var(--Dark-Grayish-Blue);
+  cursor: pointer;
+}
+
+.nav:hover{
+  color: var(--Light-Grayish-Blue);
+}
+
+.light .nav:hover{
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+#number-left{
+  pointer-events: none;
+  font-weight: 500 !important;
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.active{
+  color: var(--Bright-Blue);
+}
+
+.active:hover{
+  color: var(--Bright-Blue);
+}
+
+.nav-list-conatiner{
+display: none;
+}
+
+/* WHEN USER CHECKS COMPLETE */
+.completed p{
+ text-decoration: line-through;
+ opacity: .5;
+}
+
+.completed .checkbox{
+  background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.completed .checkbox img{
+    visibility: visible;
+}
+
+.hidden{
+  display: none;
+}
+
+.theme-switcher{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper{
+      padding: 0 40px;
+      position: relative;
+  }
+
+  .container{
+      margin-top: 55px;
+  }
+
+  .bg{
+      background-image: url(../images/bg-mobile-dark.jpg);
+      background-size: cover;
+      height: 250px;
+  }
+
+  .light .bg{
+    background-image: url(./images/bg-mobile-light.jpg);
+  }
+
+  .input input {
+    font-size: 1rem;
+  }
+
+  .header-section h1 {
+  font-size: 1.7rem;
+  }
+
+  .todo-display{
+      font-size: .9rem;
+      line-height: 20px;
+  }
+
+  .delete{
+      visibility: visible !important;
+  }
+
+  .nav-list{
+     display: none;
+  }
+
+  .nav-list-conatiner{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      justify-content: center;
+      padding: 20px 18px;
+      overflow: hidden;
+      background-color: var(--Very-Dark-Desaturated-Blue);
+      margin-top: 17px;
+      margin-bottom: 50px;
+      border-radius: .3rem;
+      box-shadow: 0px 20px 20px 0px hsl(235deg 21% 11%);
+      visibility: hidden;
+  }
+
+  .light .nav-list-conatiner{
+    box-shadow: 0px 20px 20px 0px hsla(235, 21%, 11%, 0.096);
+    background-color: var(--Very-Light-Gray);
+  }
+
+  .left{
+      gap: 15px;
+  }
+
+  .navigation{
+      margin-bottom: 0px;
+      padding: 20px 18px;
+  }
+
+  .del-icon{
+    width: 15px;
+  }
+
+  .list-item{
+    gap: 15px;
+  }
+}
